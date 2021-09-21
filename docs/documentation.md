@@ -16,7 +16,7 @@ The commands to load the tables are:
 ```\copy  employee FROM  ' data\employee.csv' delimiter ',' csv header```
 ```\copy  timesheet FROM  ' data\timesheet.csv' delimiter ',' csv header```
 
-The DDL queries are [here]().
+The DDL queries are [here](https://github.com/nischalbadal/data-validation-leapfrog/blob/day-1/sql/validation-queries.sql).
 ###### NOTE: The sheets name and the table name are maintained same to avoid any further complexities while importing the data.
 
 ## Data Validation Queries
