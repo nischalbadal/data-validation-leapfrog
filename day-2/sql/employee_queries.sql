@@ -1,4 +1,4 @@
--- check if employees punch in to their right department or not
+-- Checking if employees punch in to their right department or not.
 SELECT
     COUNT(*) AS impacted_record_count,
     CASE
@@ -13,7 +13,7 @@ group by e.client_employee_id, e.department_id, t.department_id
 having e.department_id <> t.department_id) tmp;
 
 
--- check if there are any extra managers who are not assigned to any employee
+-- Checking if all are assigned to at least one employee.
 SELECT
     COUNT(*) AS impacted_record_count,
     CASE

@@ -13,6 +13,7 @@ WHERE discount_amt = 0 AND product_id IN (
 
 --checking if selling of any products bears loss to the company
 --there is found one record whose mrp in 0.01 but the price is 36.4325 which can be an error.
+  SELECT
     COUNT(*) AS impacted_record_count,
     CASE
         WHEN COUNT(*) > 0 THEN 'failed'
@@ -35,7 +36,7 @@ FROM product
 WHERE product_id NOT IN (
     SELECT DISTINCT product_id FROM sales
     );
-    
+
 
 --check if the price of product is different in sales record
 SELECT count(*) AS impacted_record_count,
